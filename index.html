@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curriculum vitae di Alessandro Marici - Web Developer in formazione. Scopri il mio percorso, le competenze e i progetti realizzati.">
+  <meta name="author" content="Alessandro Marici">
+  <meta name="keywords" content="Alessandro Marici, curriculum, web developer, HTML, CSS, JavaScript, portfolio, sviluppatore web, autodidatta">
+  <meta name="robots" content="index, follow">
+  <title>Alessandro Marici | Web Developer Junior – CV Online</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="icon" href="data:,👨‍💻">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alessandro Marici | Curriculum Online">
+  <meta property="og:description" content="Web Developer in formazione. Guarda il mio CV online, i progetti e le competenze.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://curriculum-online.com">
+  <meta property="og:image" content="https://curriculum-online.com/preview.jpg">
+</head>
+<body>
+ 
+  <!-- NON un solo .side-buttons, ma uno per ciascun bottone -->
+  <div class="side-btn-wrapper" style="top: 100px;">
+    <button class="slide-btn dark" id="darkModeToggle" data-tooltip="Attiva/disattiva modalità scura">
+      <span class="icon">🌙</span>
+      <span class="label">Dark Mode</span>
+    </button>
+  </div>
+  
+  <div class="side-btn-wrapper" style="top: 160px;">
+    <button class="slide-btn pdf" id="downloadPDF" data-tooltip="Scarica il CV in PDF">
+      <span class="icon">📄</span>
+      <span class="label">Scarica CV</span>
+    </button>
+  </div>
+
+  <div class="container">
+  <header>
+      <h1>Alessandro Marici</h1>
+      <p class="subtitle">Web Developer in formazione</p>
+      <div class="links">
+        <a href="https://alessandromarici.github.io/portofolio-Alessandro-Marici/" target="_blank" title="Vai al mio portfolio" aria-label="Portfolio GitHub di Alessandro Marici">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/alessandromarici/" target="_blank" title="Visita il mio profilo LinkedIn" aria-label="Profilo LinkedIn di Alessandro Marici">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="mailto:alessandromarici@gmail.com" title="Scrivimi a alessandromarici@gmail.com" aria-label="Invia una email ad Alessandro Marici">
+          <i class="fas fa-envelope fa-2x"></i>
+        </a>
+        <a href="https://wa.me/393393035716" target="_blank" title="Scrivimi su WhatsApp" aria-label="Contatta Alessandro Marici su WhatsApp">
+          <i class="fab fa-whatsapp fa-2x"></i>
+        </a>
+      </div>
+  </header>
+  
+   <main>
+    <!-- ====== Sezione Bio ====== -->
+    <section class="bio">
+      <h2 class="section-title">Bio</h2>
+      <p>👨‍💻 Sono uno sviluppatore in crescita che sta imparando a programmare da autodidatta.  
+      Al momento studio HTML, CSS e JavaScript, con un approccio pratico: creo progetti utili per me, come questo CV e un piccolo portfolio online — il mio primo vero progetto.</p>
+    
+      <p>🎯 Imparo facendo: costruisco, sperimento e chiedo — voglio capire cosa fa il codice e perché.  
+      Mi piace uno stile minimal, curato nei dettagli, e sto costruendo basi solide passo dopo passo.</p>
+    
+      <p>🧠 Fuori dal codice gioco a poker (che mi aiuta ad arrotondare e allenare la mente), sono appassionato di tecnologia, faccio sport, vado in palestra e mi tengo aggiornato leggendo e guardando video.</p>
+    </section>
+ 
+    <!-- ===== Sezione Competenze ===== -->
+    <section>
+      <h2 class="section-title">Competenze</h2>
+      <ul class="skills">
+        <li><i class="fab fa-html5"></i> HTML <span class="wip">🛠️ In progress</span></li>
+        <li><i class="fab fa-css3-alt"></i> CSS <span class="wip">🛠️ In progress</span></li>
+        <li><i class="fab fa-js-square"></i> JavaScript <span class="wip">🛠️ In progress</span></li>
+    </section>
+
+    <!-- ===== Sezione Progetti ===== -->
+    <section>
+      <h2 class="section-title">Progetti</h2>
+    
+      <div class="project">
+        <h3>Portfolio 2021 – Il mio primo sito web</h3>
+        <p>Durante il corso su Start2Impact, ho scoperto il piacere della programmazione. Questo progetto rappresenta il mio primo approccio allo sviluppo web, realizzato attraverso ricerca personale e l'uso di GPT come alleato per comprendere e applicare il codice. È stato il punto di partenza del mio percorso da autodidatta.</p>
+        <a href="https://alessandromarici.github.io/portofolio-Alessandro-Marici/" target="_blank" class="project-btn">🌐 Visita il sito</a>
+      </div>
+    
+      <div class="project">
+        <h3>Curriculum Online – Questo sito</h3>
+        <p>Questo progetto nasce dall'esigenza di presentare il mio percorso in modo dinamico e accessibile. Ho utilizzato GPT come supporto per approfondire il codice, implementando le soluzioni personalmente in Visual Studio Code. Se stai visualizzando questo CV online, sei già nel posto giusto! Se invece hai una versione stampata, puoi visitare il sito al link qui sotto:</p>
+        <a href="https://curriculum-online.com" target="_blank" class="project-btn">💻 Vai al CV Online</a>
+      </div>
+    </section>
+
+    <!-- Percorso lavorativo -->
+    <section class="esperienza">
+      <h2 class="section-title">Esperienza</h2>
+      <div class="esperienza-grid">
+        <div class="item">
+          <span class="icon">🃏</span>
+          <div class="info">
+            <strong>Poker player</strong>
+            <small>2021 - Presente</small>
+            <small>(IT) Disciplina, autocontrollo, mindset</small>
+          </div>
+        </div>
+        <div class="item">
+          <span class="icon">🗂️</span>
+          <div class="info">
+            <strong>Assistente Amm. - Futurlegno</strong>
+            <small>2021 - 2023</small>
+            <small>(CH) Contabilità, personale e segreteria</small>
+          </div>
+        </div>
+        <div class="item">
+          <span class="icon">🧵</span>
+          <div class="info">
+            <strong>Sarto/Modellista/Fitter</strong>
+            <small>2013 - 2019</small>
+            <small>(IT-CH) Capospalla su misura</small>
+          </div>
+        </div>
+        <div class="item">
+          <span class="icon">👥</span>
+          <div class="info">
+            <strong>Assistente vendita - Cassiere</strong>
+            <small>Altre esperienze</small>
+            <small>(IT) Relazione cliente</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formazione -->
+<section>
+  <h2 class="section-title">Formazione</h2>
+
+  <div class="education-item">
+    <h3>Geometra Sperimentale "Progetto 5"</h3>
+    <p>Istituto Tecnico Città di Luino - Carlo Volontè</p>
+    <p><strong>Anno:</strong> 2007</p>
+  </div>
+
+  <div class="education-item">
+    <h3>Corso E-commerce Manager Junior</h3>
+    <p>Start2Impact · 2021 – Certificazione ottenuta</p>
+    <p><strong>Competenze:</strong> Marketing digitale, SEO, SEM, Copywriting, ADV, HTML/CSS, Data Analysis, Shopify</p>
+  </div>
+
+  <div class="education-item">
+    <h3>Formazione personale in corso</h3>
+    <p>Studio autonomo di HTML, CSS, JavaScript e Python</p>
+    <p><strong>Anno:</strong> 2025</p>
+  </div>
+</section>
+
+  <!-- Lingue-->
+<section class="lingue-section">
+  <h2 class="section-title">Lingue</h2>
+
+  <div class="languages-wrapper">
+    <ul class="languages">
+      <li><strong>Italiano:</strong> Madrelingua</li>
+      <li>
+        <strong>Inglese:</strong><br>
+
+        <div class="lang-label">📢 Parlato/Scritto: A2</div>
+        <div class="lang-bar">
+          <div class="fill a2"></div>
+        </div>
+
+        <div class="lang-label">📖 Ascolto/Lettura: B1</div>
+        <div class="lang-bar">
+          <div class="fill b1"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+    <!-- Aggiungi altre lingue se vuoi -->
+      </ul>
+    </section>
+   </main>
+  </div>
+  
+<!-- Collega lo script esterno -->
+<script src="script.js"></script>
+        
+</body>
+</html>

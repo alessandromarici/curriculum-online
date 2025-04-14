@@ -1,0 +1,779 @@
+/* 1. Reset / Base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eaeaea;
+  color: #333;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* 2. Layout container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* 3. Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  font-size: 1.1em;
+  color: #666;
+}
+
+/* 4. Link generali */
+.links a {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* 5. Stili Icone social */
+.links i {
+  margin: 0 10px;
+  transition: transform 0.2s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Colori personalizzati */
+.fa-github {
+  color: #24292e; /* grigio scuro, colore ufficiale GitHub */
+}
+
+/*Effetto github personalizzato scatto*/
+.fa-github:hover {
+  animation: runCat 0.6s ease-in-out infinite;
+}
+
+@keyframes runCat {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(3px); }
+  50% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
+.fa-linkedin {
+  color: #0077b6;
+}
+
+/*Effetto Linkedin personalizzato respiro*/
+.fa-linkedin:hover {
+  animation: pulseLinkedIn 1s ease-in-out infinite;
+}
+
+@keyframes pulseLinkedIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fa-envelope {
+  color: #d44638; /* rosso-arancio tipico di Gmail */
+}
+
+/*Effetto Gmail busta che si apre*/
+.fa-envelope:hover {
+  animation: openEnvelope 0.6s ease forwards;
+}
+
+@keyframes openEnvelope {
+  0% { transform: scale(1) rotate(0); }
+  50% { transform: scale(1.2) rotate(-5deg) translateY(-3px); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+.fa-envelope {
+  transition: transform 0.4s ease;
+  transform-origin: bottom;
+}
+
+.fa-whatsapp {
+  color: #25D366; /* Verde ufficiale WhatsApp */
+}
+
+.fa-whatsapp:hover {
+  transform: scale(1.3);
+  opacity: 0.85;
+}
+
+/* Hover effect per tutte */ /*Quando ci passi sopra con il mouse*/
+.links i:hover {
+  transform: scale(1.3); /* Ingrandisce del 30% */
+  opacity: 0.85; /* Leggera trasparenza */
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px auto 20px;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo-bio {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 6. Sezioni */
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  color: #0077b6;
+}
+
+.bio p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* Sezione Competenze */
+.skills {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills i {
+  font-size: 1.4em;
+  color: #f06529; /* HTML5 arancione */
+}
+
+.skills li:nth-child(2) i {
+  color: #2965f1; /* CSS3 blu */
+}
+
+.skills li:nth-child(3) i {
+  color: #f7df1e; /* giallo JS */
+}
+
+.wip {
+  color: #ffc107; /* giallo "attenzione" */
+  font-weight: bold;
+  font-size: 0.85em;
+  margin-left: 6px;
+}
+
+.project {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.project h3 {
+  margin-top: 0;
+  color: #0077b6;
+}
+
+/*Bottone github*/
+.project-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #0077b6;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.project-btn:hover {
+  background-color: #023e8a;
+}
+
+  h1 {
+    font-size: 1.6em; /* già più piccolo ma leggibile */
+  }
+
+  .subtitle {
+    font-size: 0.95em;
+  }
+
+/* Ogni bottone ha il suo contenitore */
+.side-btn-wrapper {
+  position: fixed;
+  right: 0;
+  z-index: 999;
+}
+
+/* Bottone slide */
+.slide-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 30px 0 0 30px;
+  width: 50px;
+  height: 48px;
+  overflow: hidden;
+  padding-left: 12px;
+  padding-right: 12px;
+  cursor: pointer;
+  transition: width 0.3s ease;
+}
+
+/* Label compare solo in hover */
+.slide-btn .label {
+  margin-left: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
+  pointer-events: none;
+}
+
+.slide-btn:hover .label {
+  opacity: 1;
+}
+
+/* Espansione anche da JS con classe .active */
+.slide-btn.active {
+  width: 160px;
+}
+
+.slide-btn.active .label {
+  opacity: 1;
+}
+
+/* Colori diversi */
+.slide-btn.dark {
+  background-color: #495057;
+}
+
+.slide-btn.pdf {
+  background-color: #00b4d8;
+}
+
+/* === Tooltip stile elegante === */
+.slide-btn[data-tooltip] {
+  position: relative;
+}
+
+.slide-btn[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.75em;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.slide-btn[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
+/* Espansione slide per hover (desktop) e classe active (mobile) */
+.slide-btn:hover,
+.slide-btn.active {
+  width: 160px;
+}
+
+.slide-btn:hover .label,
+.slide-btn.active .label {
+  opacity: 1;
+}
+
+/*Tema dark mode*/
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+/*Transazione morbina cambio tema*/
+body, .project, .project-btn, .education-item, .languages li, .lang-bar, a {
+  transition: background-color 0.5s ease-in-out, color 0.3s ease;
+}
+.lang-bar .fill {
+  width: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  border-radius: 4px;
+}
+
+/* Anima in base alla classe */
+.fill.a2 {
+  animation-name: fillA2;
+}
+
+.fill.b1 {
+  animation-name: fillB1;
+}
+
+@keyframes fillA2 {
+  from { width: 0; }
+  to { width: 40%; }
+}
+
+@keyframes fillB1 {
+  from { width: 0; }
+  to { width: 60%; }
+}
+
+/*Github chiara in dark mode*/
+.dark-mode .fa-github {
+  color: white;
+}
+
+/* Link e icone in dark mode */
+.dark-mode a {
+  color: #90e0ef;
+}
+
+/* Box dei progetti in modalità scura */
+.dark-mode .project {
+  background-color: #2b2b2b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Pulsante progetti */
+.dark-mode .project-btn {
+  background-color: #00b4d8;
+  color: #1e1e1e;
+}
+
+.dark-mode .project-btn:hover {
+  background-color: #48cae4;
+}
+
+/*Percorso lavorativo*/
+.esperienza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.esperienza .item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: #f1f1f1;
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: background-color 0.3s ease;
+}
+
+.esperienza .icon {
+  font-size: 1.6em;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.esperienza .info strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1em;
+  color: #333;
+}
+
+.esperienza .info small {
+  display: block;
+  color: #555;
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+
+.dark-mode .esperienza .item {
+  background-color: #2b2b2b;
+  color: #eee;
+}
+
+.dark-mode .esperienza .info small {
+  color: #ccc;
+}
+
+.esperienza .info strong {
+  color: #0077b6;
+}
+
+@media (max-width: 600px) {
+  .esperienza-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Formazione*/
+.education-item {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .education-item {
+  background-color: #2b2b2b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.education-item h3 {
+  margin-top: 0;
+  color: #0077b6;
+}
+
+.education-item ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.education-item ul li {
+  list-style-type: "✅ ";
+  margin-bottom: 4px;
+}
+
+/*Lingue*/
+.languages {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.languages li {
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.dark-mode .languages li {
+  background-color: #2b2b2b;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.language-detail {
+  display: block;
+  margin-top: 6px;
+}
+
+.lang-label {
+  margin-top: 8px;
+}
+
+.lang-bar {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 4px;
+  height: 8px;
+  margin: 4px 0 10px 0;
+  overflow: hidden;
+}
+
+.lang-bar .fill {
+  height: 100%;
+  background-color: #38b000;
+  border-radius: 4px;
+}
+
+/* Livelli */
+.fill.a2 { width: 40%; }
+.fill.b1 { width: 60%; }
+
+/* Dark mode friendly */
+.dark-mode .lang-bar {
+  background-color: #444;
+}
+
+.dark-mode .lang-bar .fill {
+  background-color: #a3f7bf;
+}
+
+@media print {
+  #downloadPDF {
+    display: none;
+  }
+}
+
+/*Responsive mobile*/
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  .subtitle {
+    font-size: 0.95em;
+  }
+
+  .links i {
+    font-size: 1.5em;
+    margin: 0 8px;
+  }
+
+  .project {
+    padding: 15px;
+  }
+
+  .project-btn {
+    font-size: 0.85em;
+    padding: 6px 12px;
+  }
+
+  section {
+    margin-bottom: 20px;
+  }
+
+}
+
+/* === VERSIONE STAMPA / PDF === */
+@media print {
+  /* Imposta margini pagina */
+  @page {
+    margin: 1.5cm;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  .dark-mode {
+    background-color: white !important;
+    color: black !important;
+  }
+ 
+  #darkModeToggle,
+  .project-btn {
+    display: none !important; /* Niente bottone e pulsanti nei PDF */
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  header {
+    margin-bottom: 20px;
+  }
+
+  h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  section {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  .skills li,
+  .languages li,
+  .education-item,
+  .project {
+    font-size: 10.5pt;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .links i {
+    font-size: 1em;
+    margin: 0 5px;
+  }
+
+  .fa-github {color: black !important; /* 👈 forza colore leggibile per Github */
+  }
+
+  a::after {
+    content: ""; /* Rimuove il link tra parentesi */
+  }
+ 
+  .lang-bar {
+    height: 6px;
+    background-color: #ccc !important;
+    display: none !important;
+  }
+
+  .lang-bar .fill {
+    background-color: #999 !important;
+    animation: none !important;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
+
+@media print {
+  .lingue-section {
+    page-break-before: always;
+  }
+}
+
+@media (max-width: 600px) {
+  .slide-btn {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+    transition: width 0.3s ease, padding 0.3s ease;
+  }
+
+/* Icona visibile sempre */
+.slide-btn .icon {
+  font-size: 1.4em;
+  flex-shrink: 0;
+}
+
+  .slide-btn .label {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .slide-btn.active {
+    width: 160px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .slide-btn.active .label {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 601px) {
+  .slide-btn:hover {
+    width: 160px;
+  }
+
+  .slide-btn:hover .label {
+    opacity: 1;
+  }
+}
+
+/* === DESKTOP: migliora proporzioni slide button === */
+@media (min-width: 601px) {
+  .slide-btn {
+    height: 54px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .slide-btn .icon {
+    font-size: 1.6em;
+  }
+
+  .slide-btn .label {
+    font-size: 1em;
+  }
+}
+
+/* === MOBILE: gestione espansione / rientro === */
+@media (max-width: 600px) {
+  .slide-btn {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+    transition: width 0.3s ease, padding 0.3s ease;
+  }
+
+  .slide-btn .label {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .slide-btn.active {
+    width: 160px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .slide-btn.active .label {
+    opacity: 1;
+  }
+
+  @media (max-width: 600px) {
+    .slide-btn:not(.active) {
+      width: 48px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .slide-btn:not(.active) .label {
+      opacity: 0;
+    }
+  }
+
+}
+
+/* Versione desktop: fissa a sinistra */
+.links {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 5px;
+  background-color: transparent;
+  z-index: 999;
+}
+
+/* Versione mobile: torna in alto nel layout */
+@media (max-width: 600px) {
+  .links {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+  }
+}
+
+
