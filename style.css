@@ -625,6 +625,12 @@ body, .project, .project-btn, .education-item, .languages li, .lang-bar, a {
     margin: 0 5px;
   }
 
+  @media print {
+    .links {
+      display: none !important;
+    }
+  }
+
   .fa-github {color: black !important; /* 👈 forza colore leggibile per Github */
   }
 
