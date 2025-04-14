@@ -655,6 +655,12 @@ body, .project, .project-btn, .education-item, .languages li, .lang-bar, a {
 }
 
 @media print {
+  .esperienza {
+    page-break-before: always;
+  }
+}
+
+@media print {
   .lingue-section {
     page-break-before: avoid;
   }
