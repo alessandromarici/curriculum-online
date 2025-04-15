@@ -663,6 +663,7 @@ body, .project, .project-btn, .education-item, .languages li, .lang-bar, a {
 @media print {
   .lingue-section {
     page-break-before: avoid;
+    break-inside: avoid;
   }
 }
 
