@@ -660,17 +660,6 @@ body, .project, .project-btn, .education-item, .languages li, .lang-bar, a {
   }
 }
 
-@media print {
-  
-  .esperienza,
-  .project,
-  .education-item {
-    display: block;
-    page-break-before: avoid;
-    break-inside: avoid;
-    break-after: avoid;
-  }
-}
 
 @media (max-width: 600px) {
   .slide-btn {
