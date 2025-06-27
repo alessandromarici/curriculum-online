@@ -660,7 +660,6 @@ body, .project, .project-btn, .education-item, .languages li, .lang-bar, a {
   }
 }
 
-
 @media (max-width: 600px) {
   .slide-btn {
     width: 48px;
