@@ -667,6 +667,7 @@ body, .project, .project-btn, .education-item, .languages li, .lang-bar, a {
   .education-item {
     page-break-before: avoid;
     break-inside: avoid;
+    break-after: avoid;
   }
 }
 
