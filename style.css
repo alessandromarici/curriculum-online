@@ -661,20 +661,15 @@ body, .project, .project-btn, .education-item, .languages li, .lang-bar, a {
 }
 
 @media print {
-  .lingue-section {
+  .lingue-section 
+  .esperienza,
+  .project,
+  .education-item {
     page-break-before: avoid;
     break-inside: avoid;
   }
 }
 
-@media print {
-  .esperienza,
-  .project,
-  .education-item {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-}
 
 @media (max-width: 600px) {
   .slide-btn {
