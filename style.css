@@ -447,8 +447,13 @@ body, .project, .project-btn, .education-item, .languages li, .lang-bar, a {
   background-color: #f1f1f1;
   padding: 20px;
   border-radius: 10px;
-  margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+@media print {
+  .education-item {
+    margin-bottom: 8px;
+  }
 }
 
 .dark-mode .education-item {
@@ -579,7 +584,7 @@ body, .project, .project-btn, .education-item, .languages li, .lang-bar, a {
   body {
     background-color: white;
     color: black;
-    font-size: 11pt;
+    font-size: 10pt;
     line-height: 1.4;
   }
 
@@ -651,12 +656,6 @@ body, .project, .project-btn, .education-item, .languages li, .lang-bar, a {
 
   * {
     transition: none !important;
-  }
-}
-
-@media print {
-  .esperienza {
-    page-break-before: always;
   }
 }
 
