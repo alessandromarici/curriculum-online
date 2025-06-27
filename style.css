@@ -699,6 +699,13 @@ body, .project, .project-btn, .education-item, .languages li, .lang-bar, a {
   }
 }
 
+@media print {
+  .esperienza {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
 /* === DESKTOP: migliora proporzioni slide button === */
 @media (min-width: 601px) {
   .slide-btn {
