@@ -1,0 +1,20 @@
+{
+  "name": "curriculum-online",
+  "version": "1.0.0",
+  "description": "👨‍💻 Curriculum Vitae responsive realizzato in HTML, CSS e JavaScript.",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^30.0.3",
+    "jest-environment-jsdom": "^30.0.2"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}

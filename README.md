@@ -20,6 +20,9 @@
 - JavaScript
 - GitHub Pages
 
+## 🧪 Test
+Esegui la suite con `npm test`.
+
 ---
 
 📌 *Primo progetto reale creato da zero nel mio percorso da sviluppatore web junior.*
