@@ -6,8 +6,8 @@ const body = document.body;
 const isDarkMode = localStorage.getItem('darkMode') === 'true';
 if (isDarkMode) {
   body.classList.add('dark-mode');
-  updateDarkButtonText(true);
 }
+updateDarkButtonText(isDarkMode);
 
 // ➤ Aggiorna testo e icona bottone dark mode
 function updateDarkButtonText(isActive) {
